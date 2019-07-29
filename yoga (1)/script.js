@@ -6,6 +6,7 @@ window.addEventListener('DOMContentLoaded', function() {// чтобы подгр
         info = document.querySelector('.info-header'),
         tabContent = document.querySelectorAll('.info-tabcontent');
 
+
     function hideTabContent(a) {  // фун-я будет скрывать  ненужные табы на странице
         for (let i = a; i < tabContent.length; i++) {
             tabContent[i].classList.remove('show');
@@ -33,6 +34,57 @@ window.addEventListener('DOMContentLoaded', function() {// чтобы подгр
                 }
             }
         }
-
     });
+
+    // Делаем таймер
+    let deadline = '2019-07-29';
+
+    //Узнаем время между сейчас и deadline
+    function getTimeRemaining(endtime) {
+        let t = Date.parse(endtime) - Date.parse(new Date()),//записываем эту разницу в t
+            // получаем из милисекунд сек,мин,час
+            seconds = Math.floor((t/1000) % 60),
+            minutes = Math.floor((t/1000/60) % 60),
+            hours = Math.floor((t/(1000*60*60)));
+
+            return{ // возвращает целый обЪект
+                'total' : t,
+                'hours' : hours,
+                'minutes' : minutes,
+                'seconds' : seconds
+            };
+    }
+
+    //превращаем статическую верстку в динамический код
+    function setClock(id, endTime) {// по id ищем таймер
+        // получаем наши эл-ты с верстки
+        let timer = document.getElementById(id),
+            hours = timer.querySelector('.hours'),
+            minutes = timer.querySelector('.minutes'),
+            seconds = timer.querySelector('.seconds'),
+            timeInterval = setInterval(updateClock, 1000);
+
+        function updateClock() { //будет вызываться и запускаться каждую сек
+            let t = getTimeRemaining(endTime);//используем здесь getTimeRemaining для получения разницы во времени
+
+            function addZero(num){
+                if(num <= 9) {
+                    return '0' + num;
+                } else return num;
+            };
+                // записываем в эл-ы  верстки обновленные данные
+            hours.textContent = addZero(t.hours);
+            minutes.textContent = addZero(t.minutes);
+            seconds.textContent = addZero(t.seconds);
+
+            if (t.total <= 0) {  // останавливаем таймер
+                clearInterval(timeInterval);
+                hours.textContent = '00';
+                minutes.textContent = '00';
+                seconds.textContent = '00';
+            }
+        }
+    }
+
+    setClock('timer', deadline);
 });
