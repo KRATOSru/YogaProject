@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9d4a3298-24df-4a83-b11d-7b43e4240aee" name="Default Changelist" comment="Timer has been added">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="9d4a3298-24df-4a83-b11d-7b43e4240aee" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yoga (1)/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/yoga (1)/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yoga (1)/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/yoga (1)/script.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -19,8 +20,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/yoga (1)/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1570">
-              <caret line="215" column="42" lean-forward="true" selection-start-line="215" selection-start-column="42" selection-end-line="215" selection-end-column="42" />
+            <state relative-caret-position="275">
+              <caret line="194" column="12" selection-start-line="194" selection-start-column="12" selection-end-line="194" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -37,8 +38,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/yoga (1)/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1020">
-              <caret line="84" column="13" selection-start-line="84" selection-start-column="13" selection-end-line="84" selection-end-column="13" />
+            <state relative-caret-position="539">
+              <caret line="110" column="42" lean-forward="true" selection-start-line="110" selection-start-column="42" selection-end-line="110" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -67,9 +68,9 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-135" />
-    <option name="y" value="133" />
+    <option name="y" value="130" />
     <option name="width" value="1400" />
-    <option name="height" value="973" />
+    <option name="height" value="975" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -174,6 +175,11 @@
       <workItem from="1564404105689" duration="1233000" />
       <workItem from="1564405435885" duration="1757000" />
       <workItem from="1564407295148" duration="1771000" />
+      <workItem from="1564409166046" duration="401000" />
+      <workItem from="1564880717613" duration="481000" />
+      <workItem from="1564881258830" duration="599000" />
+      <workItem from="1566324290655" duration="1432000" />
+      <workItem from="1566325961132" duration="1761000" />
     </task>
     <task id="LOCAL-00001" summary="Yogaa">
       <created>1563801697121</created>
@@ -203,22 +209,36 @@
       <option name="project" value="LOCAL" />
       <updated>1563818274752</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Timer has been added.">
+      <created>1564409237599</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1564409237599</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Correct code">
+      <created>1564881660524</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1564881660524</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15798000" />
+    <option name="totallyTimeSpent" value="20472000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13593256" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1354924" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3997253" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -281,7 +301,9 @@
     <MESSAGE value="Added JavaScript file in the project" />
     <MESSAGE value="Added JavaScript file in the project&#10;Mistakes has been deleted" />
     <MESSAGE value="Added comments in javascript code." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added comments in javascript code." />
+    <MESSAGE value="Timer has been added." />
+    <MESSAGE value="Correct code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Correct code" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/yoga (1)/script" />
@@ -338,15 +360,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/yoga (1)/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="84" column="13" selection-start-line="84" selection-start-column="13" selection-end-line="84" selection-end-column="13" />
+        <state relative-caret-position="539">
+          <caret line="110" column="42" lean-forward="true" selection-start-line="110" selection-start-column="42" selection-end-line="110" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/yoga (1)/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1570">
-          <caret line="215" column="42" lean-forward="true" selection-start-line="215" selection-start-column="42" selection-end-line="215" selection-end-column="42" />
+        <state relative-caret-position="275">
+          <caret line="194" column="12" selection-start-line="194" selection-start-column="12" selection-end-line="194" selection-end-column="12" />
         </state>
       </provider>
     </entry>

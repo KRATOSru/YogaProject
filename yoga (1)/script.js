@@ -37,7 +37,7 @@ window.addEventListener('DOMContentLoaded', function() {// чтобы подгр
     });
 
     // Делаем таймер
-    let deadline = '2019-07-29';
+    let deadline = '2019-08-21';
 
     //Узнаем время между сейчас и deadline
     function getTimeRemaining(endtime) {
@@ -87,4 +87,27 @@ window.addEventListener('DOMContentLoaded', function() {// чтобы подгр
     }
 
     setClock('timer', deadline);
+
+
+    // Модальное окно
+
+    let more = document.querySelector('.more'),
+        overlay = document.querySelector('.overlay'),
+        close = document.querySelector('.popup-close');
+
+     // открываем модальное окно
+    more.addEventListener('click', function () {
+        overlay.style.display = 'block';
+        this.classList.add('more-splash');// добавляем прописанную в css анимацию
+        //блокируем прокрутку страницы при открытом модальном окне
+        document.body.style.overflow = 'hidden';
+    });
+
+    // закрываем, нажимаем на крестик
+    close.addEventListener('click', function () {
+        overlay.style.display = 'none';
+        more.classList.remove('more-splash');
+        //отменяем блокировку
+        document.body.style.overflow = '';
+    })
 });
