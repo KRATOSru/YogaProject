@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9d4a3298-24df-4a83-b11d-7b43e4240aee" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yoga (1)/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/yoga (1)/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yoga (1)/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/yoga (1)/script.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -17,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/yoga (1)/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="194" column="12" selection-start-line="194" selection-start-column="12" selection-end-line="194" selection-end-column="12" />
+            <state relative-caret-position="4800">
+              <caret line="192" column="36" selection-start-line="192" selection-start-column="36" selection-end-line="192" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -35,11 +34,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/yoga (1)/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="539">
-              <caret line="110" column="42" lean-forward="true" selection-start-line="110" selection-start-column="42" selection-end-line="110" selection-end-column="42" />
+            <state relative-caret-position="1013">
+              <caret line="164" column="7" selection-start-line="164" selection-start-column="7" selection-end-line="164" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -90,6 +89,12 @@
               <item name="YogaProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="YogaProject" type="462c0819:PsiDirectoryNode" />
               <item name="yoga (1)" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="YogaProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="YogaProject" type="462c0819:PsiDirectoryNode" />
+              <item name="yoga (1)" type="462c0819:PsiDirectoryNode" />
+              <item name="__MACOSX" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="YogaProject" type="b2602c69:ProjectViewProjectNode" />
@@ -180,6 +185,12 @@
       <workItem from="1564881258830" duration="599000" />
       <workItem from="1566324290655" duration="1432000" />
       <workItem from="1566325961132" duration="1761000" />
+      <workItem from="1566327841478" duration="283000" />
+      <workItem from="1566841501601" duration="736000" />
+      <workItem from="1566927828118" duration="1748000" />
+      <workItem from="1566929940250" duration="1759000" />
+      <workItem from="1566931798385" duration="1769000" />
+      <workItem from="1566933674927" duration="565000" />
     </task>
     <task id="LOCAL-00001" summary="Yogaa">
       <created>1563801697121</created>
@@ -223,11 +234,18 @@
       <option name="project" value="LOCAL" />
       <updated>1564881660524</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Created modal window">
+      <created>1566327944675</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1566327944675</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20472000" />
+    <option name="totallyTimeSpent" value="27332000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -303,7 +321,8 @@
     <MESSAGE value="Added comments in javascript code." />
     <MESSAGE value="Timer has been added." />
     <MESSAGE value="Correct code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Correct code" />
+    <MESSAGE value="Created modal window" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created modal window" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/yoga (1)/script" />
@@ -351,6 +370,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/Downloads/script (6).js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yoga (1)/server.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yoga (1)/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4800">
+          <caret line="192" column="36" selection-start-line="192" selection-start-column="36" selection-end-line="192" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/yoga (1)/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25">
@@ -360,15 +392,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/yoga (1)/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="539">
-          <caret line="110" column="42" lean-forward="true" selection-start-line="110" selection-start-column="42" selection-end-line="110" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yoga (1)/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="194" column="12" selection-start-line="194" selection-start-column="12" selection-end-line="194" selection-end-column="12" />
+        <state relative-caret-position="1013">
+          <caret line="164" column="7" selection-start-line="164" selection-start-column="7" selection-end-line="164" selection-end-column="7" />
         </state>
       </provider>
     </entry>

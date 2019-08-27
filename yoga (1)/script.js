@@ -109,5 +109,58 @@ window.addEventListener('DOMContentLoaded', function() {// чтобы подгр
         more.classList.remove('more-splash');
         //отменяем блокировку
         document.body.style.overflow = '';
-    })
+    });
+
+
+    // Форма, будем использовать AJAX
+
+    let message = {   // создаем объект с сообщениями
+        loading: 'Загрузка....',
+        success: 'Спасибо, скоро мы с вами свяжемся',
+        failure: 'Что-то пошло не так'
+    };
+
+    // получаем все эл-ты с которыми будем работать
+    let form = document.querySelector('.main-form'),
+        input = form.getElementsByTagName('input'),
+
+        // содаем сообщение для пользователя с аннимацией
+        statusMessage = document.createElement('div');
+        statusMessage.classList.add('status');
+
+        // вешаем обработчик на form а не на кнопку
+    form.addEventListener('submit', function (event) {
+        event.preventDefault();// чтобы при нажатии не обновлялась вся страница
+        form.appendChild(statusMessage);
+
+        // формируем запрос
+        let request = new XMLHttpRequest();
+        request.open('POST', 'server.php');
+        request.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
+
+        let formData = new FormData(form);//создаем и посылаем объект с данными, которы ввел поль-ль
+
+        // превращаем formdata в json(конструкция часто используется)
+        let obj = {};// создаем промежуточный объект
+        formData.forEach(function (value, key) {
+            obj[key] = value;
+        });
+        let json = JSON.stringify(obj);//превращаем javascript объекты в JSON
+
+        request.send(JSON);
+
+        request.addEventListener('readystatechange', function () {
+            if (request.readyState < 4){
+                statusMessage.innerHTML = message.loading;
+            }else if (request.readyState == 4 && request.status == 200){
+                statusMessage.innerHTML = message.success;
+            }else {
+                statusMessage.innerHTML = message.failure;
+            }
+        });
+
+        for (let i=0; i<input.length; i++ ){ // очищаем inputы
+            input[i].value = '';
+        }
+    });
 });
