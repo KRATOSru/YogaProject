@@ -163,4 +163,66 @@ window.addEventListener('DOMContentLoaded', function() {// чтобы подгр
             input[i].value = '';
         }
     });
+
+
+    // пишем слайдер
+
+    let slideIndex = 1,
+        slides = document.querySelectorAll('.slider-item'),
+        prev = document.querySelector('.prev'),
+        next = document.querySelector('next'),
+        dotsWrap = document.querySelector('slider-dots'),
+        dots = document.querySelectorAll('.dot');
+
+    showSlides(slideIndex);
+
+    function showSlides(n) {
+
+        //листаем вперед и возвращаемся к первому
+        if (n>slides.length) {
+            slideIndex = 1;
+        }
+        //листаем назад и возвращаемся к последнему
+        if (n<1) {
+            slideIndex = slides.length;
+        }
+
+        slides.forEach((item) => item.style.display = 'none');// скрываем все слайды на стр-е
+        // for (let i=0; i<slides.length; i++) {  // аналогичная старая
+        //     slides[i].style.display = 'none'   // запись
+        // }
+
+        // убираем класс active с наших точек, а потом active назначаем одной точке
+        dots.forEach((item) => item.classList.remove('dot-active'));
+
+        slides[slideIndex-1].style.display = 'block';//первый слайдер
+        dots[slideIndex-1].classList.add('dot-active');
+    }
+
+    // фун-я будет изменять slideIndex
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    // фун-я определяет текущий слайд и устанавливает его
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    //реализуем стрелку назад
+    prev.addEventListener('click', function () {
+        plusSlides(-1);
+    });
+    // реализуем стрелку вперед
+    next.addEventListener('click', function () {
+        plusSlides(1);
+    });
+
+    //реализуем точки
+    dotsWrap.addEventListener('click', function (event) {
+        for (let i=0; i<dots.length+1; i++) {
+            if (event.target.classList.contains('dot') && event.target == dots[i - 1]) {
+            }
+        }
+    });
 });
