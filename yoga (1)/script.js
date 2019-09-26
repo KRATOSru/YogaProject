@@ -1,5 +1,5 @@
 window.addEventListener('DOMContentLoaded', function() {// чтобы подгрузилась вся
-                                                         //сначало DOM структура, а потом script
+    //сначало DOM структура, а потом script
 
     'use strict'; // переводим код в строгий режим
     let tab = document.querySelectorAll('.info-header-tab'),
@@ -23,10 +23,10 @@ window.addEventListener('DOMContentLoaded', function() {// чтобы подгр
         }
     }
 
-    info.addEventListener('click', function(event) {// применяем делегирование к обработчику событий
+    info.addEventListener('click', function (event) {// применяем делегирование к обработчику событий
         let target = event.target;
         if (target && target.classList.contains('info-header-tab')) { // если кликнули сюда
-            for(let i = 0; i < tab.length; i++) { // то перебераем, ищем нужный элемент
+            for (let i = 0; i < tab.length; i++) { // то перебераем, ищем нужный элемент
                 if (target == tab[i]) { // если то куда мы нажали совпадает с определенным табом, которые перебираем
                     hideTabContent(0); // то скрываем все табы
                     showTabContent(i); // и показываем тот, который совпал по нумерации[i].
@@ -43,16 +43,16 @@ window.addEventListener('DOMContentLoaded', function() {// чтобы подгр
     function getTimeRemaining(endtime) {
         let t = Date.parse(endtime) - Date.parse(new Date()),//записываем эту разницу в t
             // получаем из милисекунд сек,мин,час
-            seconds = Math.floor((t/1000) % 60),
-            minutes = Math.floor((t/1000/60) % 60),
-            hours = Math.floor((t/(1000*60*60)));
+            seconds = Math.floor((t / 1000) % 60),
+            minutes = Math.floor((t / 1000 / 60) % 60),
+            hours = Math.floor((t / (1000 * 60 * 60)));
 
-            return{ // возвращает целый обЪект
-                'total' : t,
-                'hours' : hours,
-                'minutes' : minutes,
-                'seconds' : seconds
-            };
+        return { // возвращает целый обЪект
+            'total': t,
+            'hours': hours,
+            'minutes': minutes,
+            'seconds': seconds
+        };
     }
 
     //превращаем статическую верстку в динамический код
@@ -67,12 +67,12 @@ window.addEventListener('DOMContentLoaded', function() {// чтобы подгр
         function updateClock() { //будет вызываться и запускаться каждую сек
             let t = getTimeRemaining(endTime);//используем здесь getTimeRemaining для получения разницы во времени
 
-            function addZero(num){
-                if(num <= 9) {
+            function addZero(num) {
+                if (num <= 9) {
                     return '0' + num;
                 } else return num;
             };
-                // записываем в эл-ы  верстки обновленные данные
+            // записываем в эл-ы  верстки обновленные данные
             hours.textContent = addZero(t.hours);
             minutes.textContent = addZero(t.minutes);
             seconds.textContent = addZero(t.seconds);
@@ -95,7 +95,7 @@ window.addEventListener('DOMContentLoaded', function() {// чтобы подгр
         overlay = document.querySelector('.overlay'),
         close = document.querySelector('.popup-close');
 
-     // открываем модальное окно
+    // открываем модальное окно
     more.addEventListener('click', function () {
         overlay.style.display = 'block';
         this.classList.add('more-splash');// добавляем прописанную в css анимацию
@@ -126,9 +126,9 @@ window.addEventListener('DOMContentLoaded', function() {// чтобы подгр
 
         // содаем сообщение для пользователя с аннимацией
         statusMessage = document.createElement('div');
-        statusMessage.classList.add('status');
+    statusMessage.classList.add('status');
 
-        // вешаем обработчик на form а не на кнопку
+    // вешаем обработчик на form а не на кнопку
     form.addEventListener('submit', function (event) {
         event.preventDefault();// чтобы при нажатии не обновлялась вся страница
         form.appendChild(statusMessage);
@@ -150,16 +150,16 @@ window.addEventListener('DOMContentLoaded', function() {// чтобы подгр
         request.send(JSON);
 
         request.addEventListener('readystatechange', function () {
-            if (request.readyState < 4){
+            if (request.readyState < 4) {
                 statusMessage.innerHTML = message.loading;
-            }else if (request.readyState == 4 && request.status == 200){
+            } else if (request.readyState == 4 && request.status == 200) {
                 statusMessage.innerHTML = message.success;
-            }else {
+            } else {
                 statusMessage.innerHTML = message.failure;
             }
         });
 
-        for (let i=0; i<input.length; i++ ){ // очищаем inputы
+        for (let i = 0; i < input.length; i++) { // очищаем inputы
             input[i].value = '';
         }
     });
@@ -179,11 +179,11 @@ window.addEventListener('DOMContentLoaded', function() {// чтобы подгр
     function showSlides(n) {
 
         //листаем вперед и возвращаемся к первому
-        if (n>slides.length) {
+        if (n > slides.length) {
             slideIndex = 1;
         }
         //листаем назад и возвращаемся к последнему
-        if (n<1) {
+        if (n < 1) {
             slideIndex = slides.length;
         }
 
@@ -195,8 +195,8 @@ window.addEventListener('DOMContentLoaded', function() {// чтобы подгр
         // убираем класс active с наших точек, а потом active назначаем одной точке
         dots.forEach((item) => item.classList.remove('dot-active'));
 
-        slides[slideIndex-1].style.display = 'block';//первый слайдер
-        dots[slideIndex-1].classList.add('dot-active');
+        slides[slideIndex - 1].style.display = 'block';//первый слайдер
+        dots[slideIndex - 1].classList.add('dot-active');
     }
 
     // фун-я будет изменять slideIndex
@@ -220,9 +220,58 @@ window.addEventListener('DOMContentLoaded', function() {// чтобы подгр
 
     //реализуем точки
     dotsWrap.addEventListener('click', function (event) {
-        for (let i=0; i<dots.length+1; i++) {
+        for (let i = 0; i < dots.length + 1; i++) {
             if (event.target.classList.contains('dot') && event.target == dots[i - 1]) {
             }
         }
     });
+
+
+    // calculator
+
+    let persons = document.querySelectorAll('.counter-block-input')[0],//кол-во людей
+        restDays = document.querySelectorAll('.counter-block-input')[0],//дни отдыха
+        place = document.getElementById('select'),//курорт
+        totalValue = document.getElementById('total'),//общая сумма
+        personsSum = 0,
+        daysSum = 0,
+        total = 0;//в этой переменной уже будет храниться общая сумма
+
+    totalValue.innerHTML = 0;
+
+    persons.addEventListener('change', function () {
+        personsSum = +this.value;// получаем то что ввел пользователь
+        total = (daysSum + personsSum) * 4000;
+
+        //если второе поле пустое то общая сумма должна быть пустая
+        if (restDays.value == '') {
+            totalValue.innerHTML = 0;
+        } else {
+            totalValue.innerHTML = total;
+        }
+    });
+
+    restDays.addEventListener('change', function () {
+        daysSum = +this.value;// получаем то что ввел пользователь
+        total = (daysSum + personsSum) * 4000;
+
+        //если первое поле пустое то общая сумма должна быть пустая
+        if (persons.value == '') {
+            totalValue.innerHTML = 0;
+        } else {
+            totalValue.innerHTML = total;
+        }
+    });
+
+    //добавляем к рассчетам выбор тура
+    place.addEventListener('change', function () {
+        if (restDays.value == '' || persons.value == '') {
+            totalValue.innerHTML = 0;
+        }else {
+            let a = total;//создаем промежуточную переменную чтобы сумма корректно отображалась
+
+            //получаем индекс перед каждым туром из кода страницы
+            totalValue.innerHTML = a * this.options[this.selectedIndex].value;
+        }
+    })
 });
